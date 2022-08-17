@@ -5,8 +5,9 @@
     'description': """
         Inventory Dashboard Information
     """,
-    'author': "Dimas Nugraha",
-    'website': "",
+    'author': "Dimas Trian",
+    'license': 'LGPL-3',
+    'website': "https://dimastriann.github.io/",
     'category': 'Inventory',
     'version': '1',
     'depends': ['stock', 'web'],
