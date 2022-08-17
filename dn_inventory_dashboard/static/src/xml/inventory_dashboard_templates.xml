@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="dn_inventory_dashboard_qweb">
+    <t t-name="dn.InventoryDashboard">
+        <div class="o_dn_inventory_dashboard container">
+            <div class="row">
+                <t t-foreach="stockValues" t-as="stock">
+                    <div class="col-sm-4">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <td rowspan="2" class="o_text o_dn_inventory_action" t-att-title="stock.name"
+                                        t-att-context='stock.context'><span t-esc="stock.name"/></td>
+                                    <td class="o_stat_waiting o_dn_inventory_action" t-att-title="stock.waiting.name"
+                                        t-att-context="stock.waiting.context" t-att-data-domain="stock.waiting.domain">
+                                        <a href="#"><t t-esc="stock.waiting.val"/><br/>Waiting</a>
+                                    </td>
+                                    <td class="o_stat_late o_dn_inventory_action" t-att-title="stock.late.name"
+                                        t-att-context="stock.late.context" t-att-data-domain="stock.late.domain">
+                                        <a href="#"><t t-esc="stock.late.val"/><br/>Late</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="o_stat o_dn_inventory_action" t-att-title="stock.ready.name"
+                                        t-att-context="stock.ready.context" t-att-data-domain="stock.ready.domain">
+                                        <a href="#"><t t-esc="stock.ready.val"/><br/>Ready</a>
+                                    </td>
+                                    <td class="o_stat o_dn_inventory_action" t-att-title="stock.backorder.name"
+                                        t-att-context="stock.backorder.context" t-att-data-domain="stock.backorder.domain">
+                                        <a href="#"><t t-esc="stock.backorder.val"/><br/>Back Orders</a>
+                                    </td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </t>
+</templates>
